@@ -24,6 +24,7 @@ include "llvm/Target/Target.td"
 include "SHUXIRegisterInfo.td"
 include "SHUXICallingConv.td"
 include "SHUXIInstrInfo.td"
+include "SHUXIIntrinsics.td"
 
 def SHUXIInstrInfo : InstrInfo;
 

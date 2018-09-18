@@ -113,6 +113,8 @@ StringRef Triple::getArchTypePrefix(ArchType Kind) {
   case bpfel:
   case bpfeb:       return "bpf";
 
+  case shuxi32:     return "shuxi";
+
   case sparcv9:
   case sparcel:
   case sparc:       return "sparc";
