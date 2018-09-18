@@ -278,7 +278,8 @@ let isCall = 1 in
   // a use to prevent stack-pointer assignments that appear immediately
   // before calls from potentially appearing dead. Uses for argument
   // registers are added manually.
-  let Uses = [SP] in {
+  // We should add implicit def for those registers that used for return arguments.
+  let Uses = [SP], Defs = [R24, R25, R26, R27, R28, R29, R30, R31] in {
     def CALLi : FC_Inst<0b00110,
                         (outs), (ins SHUXIimm16:$addr),
                         "call\t$addr", [(SHUXIcall imm:$addr)]> {
